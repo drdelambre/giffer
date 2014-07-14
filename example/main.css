@@ -1,0 +1,75 @@
+body {
+	font-family: 'Raleway', sans-serif;
+}
+div.player {
+	overflow: hidden;
+	max-height: 0px;
+
+	-webkit-transition: max-height 0.3s;
+	-moz-transition: max-height 0.3s;
+	-ms-transition: max-height 0.3s;
+	-o-transition: max-height 0.3s;
+	transition: max-height 0.3s;
+}
+div.player.show {
+	max-height: 18px;
+}
+div.player div.button {
+	cursor: pointer;
+	position: relative;
+	height: 18px;
+	float: right;
+	width: 18px;
+}
+div.player div.play:after {
+	content: '';
+	position: absolute;
+	border: 9px solid transparent;
+	border-left-color: #000;
+	left: 5px;
+}
+div.player div.pause:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	height: 14px;
+	width: 3px;
+	border-left: 5px solid #000;
+	border-right: 5px solid #000;
+	margin: 0 3px;
+}
+div.player div.frame {
+	float: right;
+	width: 100px;
+	background: #fff;
+	position: relative;
+	height: 18px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+div.player div.frame span {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: #efefef;
+	right: 0;
+}
+
+.carlton {
+	position: absolute;
+	top:50%;
+	margin-top: -250px;
+	left: 50%;
+	margin-left: -200px;
+	overflow: hidden;
+	width: 400px;
+	height: 500px;
+	background-repeat: no-repeat;
+}
+.carlton .player {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+}
